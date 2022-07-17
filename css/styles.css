@@ -118,11 +118,18 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p,
-ul {
+h6 {
+  margin-top:0
+}  
+
+p{
+  margin-top: 0;
+}
+
+ul{
+  padding: 0;
   margin: 0;
-  /* margin-top: 0; */
+  list-style: none;
 }
 
 header {
@@ -149,7 +156,7 @@ header {
 
 /*  Logo */
 
-.page-header-logo {
+.main-nav__logo {
   color: var(--primary-text-color);
 
   font-family: Raleway, cursive;
@@ -160,7 +167,7 @@ header {
   text-decoration: none;
 }
 
-.page-header-logo span {
+.main-nav__accent {
   color: var(--accent-text-color);
 }
 
@@ -173,7 +180,7 @@ header {
 
 /* Site nav */
 
-.site-nav .link {
+.site-nav__link {
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -187,12 +194,12 @@ header {
   transition-timing-function: var(--timing-function);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   color: var(--logo-text-color);
 }
 
-.site-nav .link.current {
+.site-nav__link.current {
   color: var(--primary-text-color);
 
   transition-property: color;
@@ -200,8 +207,8 @@ header {
   transition-timing-function: var(--timing-function);
 }
 
-.site-nav .link.current:hover,
-.site-nav .link.current:focus {
+.site-nav__link.current:hover,
+.site-nav__link.current:focus {
   color: var(--logo-text-color);
 }
 
@@ -210,23 +217,21 @@ header {
   display: flex;
 }
 
-.site-nav .link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-/*  Link list */
-
-.link.current {
+.site-nav__link.current {
   position: relative;
 }
 
-.link.current::after {
+.site-nav__link.current::after {
   position: absolute;
   content: "";
   display: block;
@@ -239,7 +244,9 @@ header {
   background-color: var(--primary-bgr-color-linial);
 }
 
-.link-list .link {
+/*  Link list */
+
+.link-list__link {
   display: flex;
 
   color: var(--contacts-text-color-head);
@@ -256,15 +263,15 @@ header {
   transition-timing-function: var(--timing-function);
 }
 
-.link-list .link .icon {
+.link-list__icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
   fill: currentColor;
 }
 
-.link-list .link:hover,
-.link-list .link:focus {
+.link-list__link:hover,
+.link-list__link:focus {
   color: var(--logo-text-color);
 }
 
@@ -273,7 +280,7 @@ header {
   margin-left: auto;
 }
 
-.link-list.list .item + .item {
+.link-list__item:last-child {
   margin-left: 50px;
 }
 
@@ -301,21 +308,18 @@ header {
   background-size: cover;
 }
 
-.hero .hero-title {
+.hero__title {
   display: block;
+  margin-bottom: 30px;
 
   color: var(--hero-text-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /*text-align: center;*/
+  
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero-title{
-  margin-bottom: 30px;
 }
 
 .hero {
@@ -324,7 +328,7 @@ header {
 
 /*  Кнопка "Заказать услугу" */
 
-.button.primary {
+.button__label {
   transition-property: color, background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
@@ -345,16 +349,14 @@ header {
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
 }
 
-.button.primary:hover,
-.button.primary:focus {
+.button__label:hover,
+.button__label:focus {
   background-color: var(--secondary-bgc-color-button);
   color: var(--secondary-text-button);
-}
-
-.button {
-  cursor: pointer;
 }
 
 /* Modal window */
@@ -404,7 +406,7 @@ header {
   transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn {
+.modal__btn {
   transition-property: fill;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
@@ -428,13 +430,13 @@ header {
   cursor: pointer;
 }
 
-.close-icon {
+.modal__icon {
   width: 11px;
   height: 11px;
 }
 
-.close-btn:hover,
-.close-btn:focus + svg {
+.modal__btn:hover,
+.modal__btn:focus {
   fill: var(--acent-color-icons);
 }
 
@@ -1291,6 +1293,8 @@ textarea:focus{
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  cursor: pointer;
 }
 
 .project .item {
