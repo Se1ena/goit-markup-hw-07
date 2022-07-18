@@ -107,53 +107,53 @@
           </button>
           <!--Form-->
           <form class="form app-form">
-            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-            <label for="name">Имя</label>
+            <p class="form__title">Оставьте свои данные, мы вам перезвоним</p>
+            <label class="form__text" for="name">Имя</label>
             <div class="form-group">
               <input
-                class="form-input"
+                class="form-group__input"
                 type="text"
                 name="name"
                 id="name"
                 required
                 autofocus
               />
-              <svg class="form-icon">
+              <svg class="form-group__icon">
                 <use href="./images/icons/sprite.svg#icon-person"></use>
               </svg>
             </div>
 
-            <label for="tel">Телефон</label>
+            <label class="form__text" for="tel">Телефон</label>
             <div class="form-group">
               <input
-                class="form-input"
+                class="form-group__input"
                 type="tel"
                 name="tel"
                 id="tel"
                 required
               />
-              <svg class="form-icon">
+              <svg class="form-group__icon">
                 <use href="./images/icons/sprite.svg#icon-phone"></use>
               </svg>
             </div>
 
-            <label for="email">Почта</label>
+            <label class="form__text" for="email">Почта</label>
             <div class="form-group">
               <input
-                class="form-input"
+                class="form-group__input"
                 type="email"
                 name="email"
                 id="email"
                 required
               />
-              <svg class="form-icon">
+              <svg class="form-group__icon">
                 <use href="./images/icons/sprite.svg#icon-email"></use>
               </svg>
             </div>
 
-            <label for="comment">Комментарий</label>
+            <label class="form__text" for="comment">Комментарий</label>
             <div class="form-group comment">
-              <textarea
+              <textarea class="form-group__textarea"
                 name="comment"
                 id="comment"
                 rows="10"
@@ -161,18 +161,18 @@
               ></textarea>
             </div>
 
-            <label class="checkbox">
+            <label class="form__checkbox">
               <input
-                class="check-policy"
+                class="form-checkbox__input"
                 type="checkbox"
                 name="policy"
                 id="policy"
               />
-              <span class="policy-icon"></span>
-              <span class="checkbox-label">
+              <span class="form-checkbox__icon"></span>
+              <span class="form-checkbox__text">
                 Соглашаюсь с рассылкой и принимаю
                 <a
-                  class="checkbox-link"
+                  class="form-checkbox__link"
                   href="./index.html"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
@@ -182,7 +182,7 @@
             </label>
 
             <div class="form-btn">
-              <button class="submit-btn" type="submit">Отправить</button>
+              <button class="form-btn__submit" type="submit">Отправить</button>
             </div>
           </form>
         </div>
