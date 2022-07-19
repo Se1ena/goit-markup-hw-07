@@ -25,15 +25,15 @@
     <header class="page-header">
       <div class="container">
         <nav class="main-nav">
-          <a href="./index.html" class="main-nav__logo" title="WebStudio">
+          <a class="main-nav__logo" href="./index.html" title="WebStudio">
             <span class="main-nav__accent">Web</span>
             Studio
           </a>
           <ul class="site-nav list">
             <li class="site-nav__item">
               <a
+                class="site-nav__link site-nav__link--current"
                 href="./index.html"
-                class="site-nav__link current"
                 title="Студия"
               >
                 Студія
@@ -41,8 +41,8 @@
             </li>
             <li class="site-nav__item">
               <a
-                href="./portfolio.html"
                 class="site-nav__link"
+                href="./portfolio.html"
                 title="Портфолио"
               >
                 Портфоліо
@@ -55,8 +55,8 @@
           <ul class="link-list list">
             <li class="link-list__item">
               <a
-                href="mailto:info@devstudio.com"
                 class="link-list__link"
+                href="mailto:info@devstudio.com"
                 title="Contact us"
               >
                 <svg class="link-list__icon">
@@ -67,8 +67,8 @@
             </li>
             <li class="link-list__item">
               <a
-                href="tel:+380961111111"
                 class="link-list__link"
+                href="tel:+380961111111"
                 title="Contact us"
               >
                 <svg class="link-list__icon">
@@ -95,9 +95,9 @@
       </section>
       <!--Modal window-->
       <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button data-modal-close class="modal__btn" type="button">
-            <svg class="modal__icon">
+        <div class="modal-window">
+          <button data-modal-close class="modal-window__btn" type="button">
+            <svg class="modal-window__icon">
               <use
                 width="11px"
                 height="11px"
@@ -152,7 +152,7 @@
             </div>
 
             <label class="form__text" for="comment">Коментар</label>
-            <div class="form-group comment">
+            <div class="form-group form-group--comment">
               <textarea
                 class="form-group__textarea"
                 name="comment"
@@ -191,11 +191,11 @@
       <!--Особливості-->
       <section class="section-feature list">
         <div class="container">
-          <h2 class="section__title exclusive">Особливості</h2>
+          <h2 class="section__title section__title--exclusive">Особливості</h2>
           <ul class="feature-list list">
             <li class="feature-list__item">
               <div class="list-item-preview">
-                <svg class="list-item__icon icon-antenna">
+                <svg class="list-item__icon">
                   <use href="./images/icons/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -207,7 +207,7 @@
             </li>
             <li class="feature-list__item">
               <div class="list-item-preview">
-                <svg class="list-item__icon icon-clock">
+                <svg class="list-item__icon">
                   <use href="./images/icons/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -219,7 +219,7 @@
             </li>
             <li class="feature-list__item">
               <div class="list-item-preview">
-                <svg class="list-item__icon icon-diagram">
+                <svg class="list-item__icon">
                   <use href="./images/icons/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -230,7 +230,7 @@
             </li>
             <li class="feature-list__item">
               <div class="list-item-preview">
-                <svg class="list-item__icon icon-astronaut">
+                <svg class="list-item__icon">
                   <use href="./images/icons/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -246,7 +246,7 @@
       <!--Чим ми займаємося-->
       <section class="section-works">
         <div class="container">
-          <h2 class="section__title work">Чим ми займаємося</h2>
+          <h2 class="section__title section__title--work">Чим ми займаємося</h2>
           <ul class="list-icons">
             <li class="list-icons__image list">
               <img
@@ -345,7 +345,7 @@
               <img
                 class="team-list__photo"
                 src="./images/team/two.jpg"
-                alt="Фотография Frontend Developer"
+                alt="Фотографія Frontend Developer"
                 width="270"
               />
               <div class="profession">
@@ -397,7 +397,7 @@
               <img
                 class="team-list__photo"
                 src="./images/team/three.jpg"
-                alt="Фотография Marketing"
+                alt="Фотографія Marketing"
                 width="270"
               />
               <div class="profession">
@@ -449,7 +449,7 @@
               <img
                 class="team-list__photo"
                 src="./images/team/four.jpg"
-                alt="Фотография UI Designer"
+                alt="Фотографія UI Designer"
                 width="270"
               />
               <div class="profession">
@@ -578,7 +578,10 @@
                 >
               </li>
               <li class="footer-list__item">
-                <a class="footer-list__link" href="tel:+380961111111" title="Contact us"
+                <a
+                  class="footer-list__link"
+                  href="tel:+380961111111"
+                  title="Contact us"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -599,7 +602,9 @@
               <li class="social-group__links">
                 <a class="social-group__icon" aria-label="Twitter" href="">
                   <svg class="social-group__pic">
-                    <use href="./images/icons/sprite.svg#icon-flogotwitter-2"></use>
+                    <use
+                      href="./images/icons/sprite.svg#icon-flogotwitter-2"
+                    ></use>
                   </svg>
                 </a>
               </li>
@@ -613,7 +618,9 @@
               <li class="social-group__links">
                 <a class="social-group__icon" aria-label="LinkedIn" href="">
                   <svg class="social-group__pic">
-                    <use href="./images/icons/sprite.svg#icon-flogolinkedin-2"></use>
+                    <use
+                      href="./images/icons/sprite.svg#icon-flogolinkedin-2"
+                    ></use>
                   </svg>
                 </a>
               </li>
