@@ -34,17 +34,45 @@ html {
   --secondary-bgc-color-button: #f5f4fa;
   /* Text color position-elements (works, cards-projects) */
   --primary-text-color-pos-el: #FFFFFF;
+
+  /* Header */
+  --border-bottom-header: 1px solid #ececec;
+
   /* Background colors */
-  --head: #ffffff;
+  --header: #ffffff;
   --hero: #2f303a;
+  --bgr-color-modal-window: #FFFFFF;
+  --bgr-color-backdrop: rgba(0, 0, 0, 0.2);
   --main: #e5e5e5;
   --footer: #2f303a;
+
+ /* Modal window */
+  --madal-w-box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+  --modal-w-btn-border: 1px solid rgba(0, 0, 0, 0.1);
+
   /* Text color button */
   --primary-text-button: #ffffff;
   --secondary-text-button: #212121;
+
   /* Background colors button */
   --primary-bgc-color-button: #2196f3;
   --secondary-bgc-color-button: #f5f4fa;
+
+ /* Icons features-list */
+ --bgr-c-feature-icons: #f5f4fa;
+
+ /* Overlay-text (features) */
+  --overlay-text-bgr-c: rgba(47, 48, 58, 0.8);
+
+  /* Section-team */
+  --background-section-team: #F5F4FA;
+  --bgr-c-section-team-fotos: #FFFFFF;
+  --section-team-fotos-b-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  --border-section-team: 0px 0px 4px 4px;
+  --social-links-icon: #ffffff;
+  --social-links-icon-bgr-c: rgba(255, 255, 255, 0.1);
+
   /*Color icons*/
   --primary-color-icon: #afb1b8;
   --acent-color-icons: #2196f3;
@@ -52,29 +80,40 @@ html {
   /*Colors for icons company-clients*/
   --primary-color-border: #afb1b8;
   --color-icons-company: #afb1b8;
+  --border-clients-icon: 1px solid #afb1b8;
+  --clients-icon-fill-hover: #2196f3;
+  --clients-icon-border-hover: #2196f3;
 
   /*Background color-linial-contacts*/
   --primary-bgr-color-linial: #2196F3;
-
-  /* Modal window */
-  --bgr-color-modal-window: #FFFFFF;
 
   /* Animation */
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  /* Button Замовити послугу*/
+  --btn-label-border: 1px solid transparent;
+  --btn-label-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   /* Text color form (label) */
   --text-color-label: #757575;
   --text-color-textarea: rgba(117, 117, 117, 0.5);
+
+  --color-hover-input-icon: #2196F3;
 
   /* Text color form-footer */
   --text-clr-form-footer-p: #FFFFFF;
 
   /* Background color form (input) */
   --bgr-color-input: background: #2F303A;
+  --border-input: 1px solid rgba(33, 33, 33, 0.2);
+  --border-input-hover: 1px solid #2196F3;
 
   /* Background color form (button) */
   --bgr-color-form-button: #2196F3;
+  --btn-submit-border: 1px solid transparent;
+  --btn-submit-box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  --btn-submit-hover: #188CE8;
  
   /* Form (textarea) */
  --border-color-textarea: 1px solid rgba(33, 33, 33, 0.2);
@@ -88,8 +127,35 @@ html {
 
  /* Form (text-label) */
  --text-color-label: #757575;
-}
+ 
 
+ /* Social-group-icon (footer) */
+ --bgr-c-icon-footer: rgba(255, 255, 255, 0.1);
+
+ /* Form subscribe */
+ --subscribe-text-border: 1px solid rgba(255, 255, 255, 0.3);
+ --subscribe-text-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+ --subscribe-text-color: #FFFFFF;
+ --subs-btn-b-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+ --subs-btn-border-color: #2196F3;
+ --subs-btn-hover: #188CE8;
+ --subs-btn-fill-icon: #ffffff;
+
+  /* Portfolio */
+  --list-btn-b-shadow-hover: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  /* Projects */
+ --cards-overlay-text-bgr: rgba(33, 150, 243, 0.9);
+ --list-item-b-shadow-hover: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+ 1px 4px 6px rgba(0, 0, 0, 0.16);
+ --cards-border: 1px solid #eeeeee;
+
+
+
+
+
+}
 /* цвет основного текста #212121 */
 /* цвет вторичного текста #757575 */
 /* цвет текста части логотипа #2196F3 */
@@ -133,8 +199,8 @@ ul{
 }
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
+  background-color: var(--header);
+  border-bottom: var(--border-bottom-header);
 }
 
 .container {
@@ -159,7 +225,7 @@ header {
 .main-nav__logo {
   color: var(--primary-text-color);
 
-  font-family: Raleway, cursive;
+  font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -290,7 +356,7 @@ header {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: #2f303a;
+  background-color: var(--hero); 
 
   max-width: 1600px;
   height: 600px;
@@ -326,7 +392,7 @@ header {
   text-align: center;
 }
 
-/*  Кнопка "Замовити послугу" */
+/* Кнопка "Замовити послугу" */
 
 .button__label {
   transition-property: color, background-color;
@@ -334,8 +400,8 @@ header {
   transition-timing-function: var(--timing-function);
 
   border-radius: 4px;
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: var(--btn-label-border);
+  box-shadow: var(--btn-label-box-shadow); 
   padding: 10px 32px;
   min-width: 136px;
   text-align: center;
@@ -369,7 +435,7 @@ header {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--bgr-color-backdrop); 
 
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
@@ -386,6 +452,10 @@ header {
 }
 
 .modal-window {
+  transform: translate(-50%, -50%) scale(1);
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -394,16 +464,9 @@ header {
 
   min-width: 528px;
   min-height: 581px;
-
-  background-color: var(--bgr-color-modal-window);
-
-  background: #FFFFFF;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  transform: translate(-50%, -50%) scale(1);
-
-  transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--madal-w-box-shadow);
+  background-color: var(--bgr-color-modal-window); 
 }
 
 .modal-window__btn {
@@ -422,16 +485,16 @@ header {
   justify-content: center;
   align-items: center;
 
-  border-radius: 50%;
+  border-radius: 50%; 
 
   background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: var(--modal-w-btn-border);
 
   cursor: pointer;
 }
 
 .modal-window__icon {
-  width: 11px;
+  width: 11px; 
   height: 11px;
 }
 
@@ -457,9 +520,9 @@ header {
   transform: translateY(-50%);
 }
 
-.form-group__input:hover + .form-group__icon,
+.form-group__input:hover + .form-group__icon, 
 .form-group__input:focus + .form-group__icon{
-  fill: #2196F3;
+  fill: var(--color-hover-input-icon);
 }
 
 
@@ -495,7 +558,7 @@ header {
   width: 100%;
   height: 40px;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: var(--border-input);
   border-radius: 4px;
 
   outline: none;
@@ -503,11 +566,11 @@ header {
 
 .form-group__input:hover,
 .form-group__input:focus{
-  border: 1px solid #2196F3;
+  border: var(--border-input-hover);
 }
 
 .form__title {
-  margin-bottom: 12px;
+  margin-bottom: 12px; 
 
   font-weight: 700;
   font-size: 20px;
@@ -600,7 +663,7 @@ header {
   background-color: var(--checkbox-bgr-color-checked);
   background-image: url(../images/icons/full-check.svg);
   background-size: contain;
-  background-origin: border-box;
+  background-origin: border-box; 
 }
 
 .form-btn__submit {
@@ -609,8 +672,8 @@ header {
   transition-timing-function: var(--timing-function);
 
   border-radius: 4px;
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border: var(--btn-submit-border);
+  box-shadow: var(--btn-submit-box-shadow);
 
   padding: 10px 55px;
   margin: 0;
@@ -633,12 +696,12 @@ header {
 
 .form-btn{
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .form-btn__submit:hover,
 .form-btn__submit:focus{
-  background-color: #188CE8;
+  background-color: var(--btn-submit-hover);
 }
 
 /* Section in index.html and portfolio */
@@ -711,7 +774,7 @@ header {
 
 .list-item__icon {
   width: 70px;
-  height: 70px;
+  height: 70px; 
 }
 
 .list-item-preview {
@@ -720,11 +783,11 @@ header {
   align-items: center;
   height: 120px;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
+  background-color: var(--bgr-c-feature-icons);
   border-radius: 4px;
 }
 
-/* Чим ми займаємося */
+/* Чим ми займаємося */ 
 
 .overlay__text {
   width: 370px;
@@ -749,7 +812,7 @@ header {
   
   color: var(--primary-text-color-pos-el) ;
 
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: var(--overlay-text-bgr-c);
 }
 
 .list-icons__image {
@@ -806,20 +869,19 @@ header {
   justify-content: space-between;
 
   gap: 30px;
-}
+} 
 
 .section-team {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  background: #F5F4FA;
+  background: var(--background-section-team);
 }
 
 .team-list__photos {
-  background-color: #FFFFFF;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  background-color: var(--bgr-c-section-team-fotos);
+  box-shadow: var(--section-team-fotos-b-shadow);
+  border-radius: var(--border-section-team);
 }
 
 .profession {
@@ -855,7 +917,7 @@ header {
 .social-links__icon:hover,
 .social-links__icon:focus{
   background-color: var(--acent-color-icons);
-  color: #ffffff;
+  color: var(--social-links-icon);
 }
 
 .social-links__pic{
@@ -869,8 +931,8 @@ header {
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: var(--social-links-icon-bgr-c);
+  color: var(--social-links-icon);
 }
 
 /* Clients */
@@ -917,15 +979,15 @@ header {
   width: 170px;
   height: 92px;
 
-  border: 1px solid #afb1b8;
+  border: var(--border-clients-icon);
   border-radius: 4px;
   fill: var(--color-icons-company);
 }
 
 .clients__icon:focus,
 .clients__icon:hover {
-  fill: #2196f3;
-  border-color: #2196f3;
+  fill: var(--clients-icon-fill-hover);
+  border-color: var(--clients-icon-border-hover);
 }
 
 /*  Logo Footer */
@@ -941,7 +1003,7 @@ header {
 }
 
 .footer-logo__link {
-  font-family: Raleway, cursive;
+  font-family: var(--logo-font);
 
   font-weight: 700;
   font-size: 26px;
@@ -954,13 +1016,13 @@ header {
   margin-right: 70px;
 }
 
-/*  Footer */
+/*  Footer */ 
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: #2f303a;
+  background-color: var(--footer);
 }
 
 .footer-list__adress {
@@ -1019,7 +1081,7 @@ header {
   text-decoration: none;
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: var(--social-links-icon);
 }
 
 .social-group__icon {
@@ -1031,13 +1093,13 @@ header {
   justify-content: center;
   border-radius: 50%;
   color: var(--primary-color-icon);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bgr-c-icon-footer);
 }
 
 .social-group__icon:hover,
 .social-group__icon:focus{
   background-color: var(--acent-color-icons);
-  color: #ffffff;
+  color: var(--social-links-icon);
 }
 
 .social-group__pic{
@@ -1089,13 +1151,13 @@ header {
   margin: 0;
   margin-right: 12px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border: var(--subscribe-text-border);
+  filter: var(--subscribe-text-filter);
   border-radius: 4px;
 
   background-color: var(--bgr-color-input);
 
-  color: #FFFFFF;
+  color: var(--subscribe-text-color);
 }
 
 .subs-btn {
@@ -1127,9 +1189,9 @@ header {
   color: var(--primary-text-button);
 
   background-color: var(--bgr-color-form-button);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--subs-btn-b-shadow);
   border-radius: 4px;
-  border-color: #2196F3;
+  border-color: var(--subs-btn-border-color);
 
   cursor: pointer;
   outline: none;
@@ -1137,7 +1199,7 @@ header {
 
 .subs-btn:hover,
 .subs-btn:focus{
-  background: #188CE8;
+  background: var(--subs-btn-hover);
 }
 
 /*.close-btn:hover,
@@ -1157,7 +1219,7 @@ header {
   width: 24px;
   height: 24px;
 
-  fill: #ffffff;
+  fill: var(--subs-btn-fill-icon);
 }
 
 /****************************/
@@ -1175,7 +1237,7 @@ header {
   display: none;
 }
 
-/*  Кнопки фильтру портфоліо */
+/* Кнопки фильтру портфоліо */
 
 .list-buttons__portfolio {
   transition-property: color, background-color, box-shadow;
@@ -1207,8 +1269,7 @@ header {
   background-color: var(--primary-bgc-color-button);
   color: var(--primary-text-button);
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-   0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--list-btn-b-shadow-hover);
 }
 
 .list-buttons {
@@ -1264,7 +1325,7 @@ header {
   text-align: left;
  
   color: var(--primary-text-color-pos-el);
-  background: rgba(33, 150, 243, 0.9);
+  background: var(--cards-overlay-text-bgr);
 }
 
 .project-list__item:hover .cards-overlay__text {
@@ -1280,8 +1341,7 @@ header {
 .project-list__item:hover,
 .project-list__item:focus,
 .project-list__item.active {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--list-item-b-shadow-hover);
 }
 
 .project-list__item.active {
@@ -1296,7 +1356,7 @@ header {
   padding-right: 24px;
   padding-left: 24px;
 
-  border: 1px solid #eeeeee;
+  border: var(--cards-border);
 }
 
 .project-cards__title {
@@ -1326,9 +1386,7 @@ header {
   gap: 30px;
 }
 
-.cards-overlay-text {
-  border: 1px solid #eeeeee;
-}
+
 
 
 
