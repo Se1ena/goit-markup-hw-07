@@ -219,7 +219,6 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-
 .main-nav__accent {
   color: var(--accent-text-color);
 }
@@ -866,13 +865,11 @@ header {
   background-color: var(--acent-color-icons);
   color: var(--social-links-icon);
 }
-
 .social-links__pic {
   width: 44px;
   height: 44px;
   fill: currentColor;
 }
-
 .social-links__icon.black-icon {
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;

@@ -1,19 +1,43 @@
 /* Projects */
 
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+  cursor: pointer;
+
+  &__item {
+    transition-property: box-shadow;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  
     gap: 30px;
   
-    cursor: pointer;
+    &:hover,
+    &:focus{
+      box-shadow: var(--list-item-b-shadow-hover);
+    }
   }
-  
-  .cards-overlay {
-    overflow: hidden;
-    position: relative;
+
+  &__item:hover .cards-overlay__text {
+    transform: translateY(0);
   }
+
+  &__item.active {
+    transition-property: box-shadow;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
   
-  .cards-overlay__text {
+    box-shadow: var(--list-item-b-shadow-hover);
+  }
+}
+  
+.cards-overlay {
+  overflow: hidden;
+  position: relative;
+
+  &__text {
     transform: translateY(101%);
     transition: var(--duration);
     transition-timing-function: var(--timing-function);
@@ -38,40 +62,21 @@
     color: var(--primary-text-color-pos-el);
     background: var(--cards-overlay-text-bgr);
   }
-  
-  .project-list__item:hover .cards-overlay__text {
-    transform: translateY(0);
-  }
-  
-  .project-list__item {
-    transition-property: box-shadow;
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 
-    &:hover,
-    &:focus{
-      box-shadow: var(--list-item-b-shadow-hover);
-    }
+  &__image {
+    display: block;
   }
-    
-  .project-list__item.active {
-    transition-property: box-shadow;
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
+}
+           
+.project-cards {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  
+  border: var(--cards-border);
 
-    box-shadow: var(--list-item-b-shadow-hover);
-  }
-  
-  .project-cards {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 24px;
-    padding-left: 24px;
-  
-    border: var(--cards-border);
-  }
-  
-  .project-cards__title {
+  &__title {
     margin-bottom: 4px;
   
     color: var(--primary-text-color);
@@ -81,19 +86,20 @@
     line-height: 2;
     letter-spacing: 0.06em;
   }
-  
-  .project-cards__text {
+
+  &__text {
     color: var(--title-text-color);
   
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
   }
+}
   
-  .cards-overlay__image {
-    display: block;
-  }
+ 
   
-  .project-list__item{
-    gap: 30px;
-  }
+ 
+  
+
+  
+ 

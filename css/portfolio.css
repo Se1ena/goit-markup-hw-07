@@ -219,7 +219,6 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-
 .main-nav__accent {
   color: var(--accent-text-color);
 }
@@ -340,12 +339,27 @@ header {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .section-filters__title {
   display: none;
 }
 
 /* Кнопки фильтру портфоліо */
+.list-buttons {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.list-buttons__item {
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.list-buttons__item:not(:last-child) {
+  margin-right: 8px;
+}
 .list-buttons__portfolio {
   -webkit-transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, -webkit-box-shadow;
@@ -375,31 +389,11 @@ header {
   -webkit-box-shadow: var(--list-btn-b-shadow-hover);
           box-shadow: var(--list-btn-b-shadow-hover);
 }
-
 .list-buttons__portfolio.active {
   background-color: var(--primary-bgc-color-button);
   color: var(--primary-text-button);
   -webkit-box-shadow: var(--list-btn-b-shadow-hover);
           box-shadow: var(--list-btn-b-shadow-hover);
-}
-
-.list-buttons {
-  margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.list-buttons__item {
-  display: inline-block;
-  border: 1px solid transparent;
-}
-
-.list-buttons__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 /* Projects */
@@ -412,12 +406,42 @@ header {
   gap: 30px;
   cursor: pointer;
 }
+.project-list__item {
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--duration);
+          transition-duration: var(--duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+  gap: 30px;
+}
+.project-list__item:hover, .project-list__item:focus {
+  -webkit-box-shadow: var(--list-item-b-shadow-hover);
+          box-shadow: var(--list-item-b-shadow-hover);
+}
+.project-list__item:hover .cards-overlay__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.project-list__item.active {
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--duration);
+          transition-duration: var(--duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+  -webkit-box-shadow: var(--list-item-b-shadow-hover);
+          box-shadow: var(--list-item-b-shadow-hover);
+}
 
 .cards-overlay {
   overflow: hidden;
   position: relative;
 }
-
 .cards-overlay__text {
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
@@ -441,38 +465,8 @@ header {
   color: var(--primary-text-color-pos-el);
   background: var(--cards-overlay-text-bgr);
 }
-
-.project-list__item:hover .cards-overlay__text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.project-list__item {
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: var(--duration);
-          transition-duration: var(--duration);
-  -webkit-transition-timing-function: var(--timing-function);
-          transition-timing-function: var(--timing-function);
-}
-.project-list__item:hover, .project-list__item:focus {
-  -webkit-box-shadow: var(--list-item-b-shadow-hover);
-          box-shadow: var(--list-item-b-shadow-hover);
-}
-
-.project-list__item.active {
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: var(--duration);
-          transition-duration: var(--duration);
-  -webkit-transition-timing-function: var(--timing-function);
-          transition-timing-function: var(--timing-function);
-  -webkit-box-shadow: var(--list-item-b-shadow-hover);
-          box-shadow: var(--list-item-b-shadow-hover);
+.cards-overlay__image {
+  display: block;
 }
 
 .project-cards {
@@ -482,7 +476,6 @@ header {
   padding-left: 24px;
   border: var(--cards-border);
 }
-
 .project-cards__title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
@@ -491,20 +484,11 @@ header {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
 .project-cards__text {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-
-.cards-overlay__image {
-  display: block;
-}
-
-.project-list__item {
-  gap: 30px;
 }
 
 /*  Logo Footer */
