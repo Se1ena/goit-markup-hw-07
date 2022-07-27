@@ -210,6 +210,10 @@
   overflow: hidden;
 }
     
+.form-checkbox__text{
+  color: var(--text-color-checkbox);
+}
+
 .form-checkbox__link{
   color:var(--bgr-color-checkbox);
 }

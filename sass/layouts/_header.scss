@@ -48,7 +48,7 @@ header {
 .site-nav__link--current {
   position: relative;
 
-  color: var(--primary-text-color);
+  color:var(--logo-text-color);
 
   transition-property: color;
   transition-duration: var(--duration);
